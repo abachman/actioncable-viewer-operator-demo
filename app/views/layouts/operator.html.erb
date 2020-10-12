@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cable Session</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag 'operator', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'operator', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'operator/shared/menu' %>
+    <%= render 'shared/flash' %>
+    <%= yield %>
+  </body>
+</html>

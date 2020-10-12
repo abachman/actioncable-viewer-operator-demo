@@ -1,0 +1,13 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  height: 100vh;
+}
+
+.login-container {
+  height: 100%;
+
+  .row {
+    height: 100%;
+  }
+}

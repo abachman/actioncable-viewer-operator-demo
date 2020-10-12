@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Connect Viewer</h1>
+
+      <%= form_for :chat_session, url: operator_chat_sessions_path, html: { class: 'form-inline' } do |f| %>
+        <div class="form-group mb-2">
+          <%= f.label :token, class: 'sr-only' %>
+          <%= f.text_field :token, class: 'form-control', html_options: { placeholder: 'ENTER CODE' } %>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Connect</button>
+      <% end %>
+    </div>
+  </div>
+</div>

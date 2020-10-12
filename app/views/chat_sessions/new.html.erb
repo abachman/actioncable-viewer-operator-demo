@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="dropdown">
+      <%= button_to 'Reset Session', chat_session_path(@chat_session), method: :delete, local: false, class: 'btn btn-danger' %>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div id="signin"></div>
+</div>
+
+<script>
+  window.SESSION = {
+    id: '<%= @chat_session.id %>',
+    token: '<%= @chat_session.token %>',
+    active: '<%= @chat_session.active.to_s %>',
+  }
+</script>

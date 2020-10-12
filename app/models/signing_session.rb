@@ -1,2 +1,0 @@
-class SigningSession < ApplicationRecord
-end

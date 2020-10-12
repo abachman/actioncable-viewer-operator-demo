@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>CHAT SESSION</h1>
+
+      <div id="operator-app"></div>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">OPERATOR</th>
+            <td><%= @chat_session.operator.email %></td>
+          </tr>
+          <tr>
+            <th scope="row">VIEWER</th>
+            <td><%= @chat_session.token %></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <%= button_to 'DISCONNECT', disconnect_operator_chat_session_path(@chat_session), method: 'post' %>
+
+      <script>
+        window.SESSION = {
+          id: '<%= @chat_session.id %>',
+          token: '<%= @chat_session.token %>',
+          active: '<%= @chat_session.active.to_s %>',
+        }
+      </script>
+    </div>
+  </div>
+</div>

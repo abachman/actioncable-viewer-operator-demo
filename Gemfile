@@ -4,14 +4,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
+gem 'aasm', '~> 5.1.1'
+gem 'base32', '~> 0.3.4'
+gem 'bcrypt', '~> 3.1.7'
+gem 'descriptive_statistics', '~> 2.5.1', require: 'descriptive_statistics/safe'
+gem 'jbuilder', '~> 2.7'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
-gem 'webpacker', '~> 4.0'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.7'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'redis', '~> 4.0'
-gem 'bcrypt', '~> 3.1.7'
+gem 'turbolinks', '~> 5'
+gem 'webpacker', '~> 4.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

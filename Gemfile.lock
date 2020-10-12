@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (5.1.1)
+      concurrent-ruby (~> 1.0)
     actioncable (6.0.3.3)
       actionpack (= 6.0.3.3)
       nio4r (~> 2.0)
@@ -58,6 +60,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    base32 (0.3.4)
     bcrypt (3.1.15)
     bindex (0.8.1)
     bootsnap (1.4.8)
@@ -75,6 +78,7 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    descriptive_statistics (2.5.1)
     erubi (1.9.0)
     ffi (1.13.1)
     globalid (0.4.2)
@@ -189,10 +193,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm (~> 5.1.1)
+  base32 (~> 0.3.4)
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  descriptive_statistics (~> 2.5.1)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
