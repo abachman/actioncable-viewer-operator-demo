@@ -1,6 +1,7 @@
 class ChatSessionsController < ApplicationController
   before_action :prepare_chat_session, only: %i[new]
   before_action :load_chat_session, only: %i[destroy]
+  before_action :prevent_when_signed_in
 
   def new
     logger.info "[ChatSessions#new] setting session_id to #{@chat_session.id}"

@@ -20,10 +20,14 @@ class Operator::ChatSessionsController < OperatorController
   end
 
   def create
-    logger.info 'Operator::ChatSessionsController create!!'
+    logger.info 'Operator::ChatSessionsController create connection'
 
     @chat_session =
-      ChatSession.find_by(token: params[:chat_session][:token], operator: nil)
+      ChatSession.find_by(
+        'token = ? AND (operator_id IS NULL OR operator_id = ?)',
+        params[:chat_session][:token],
+        current_operator.id
+      )
 
     if @chat_session.present?
       @chat_session.update(operator: current_operator)

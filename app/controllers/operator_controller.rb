@@ -12,12 +12,4 @@ class OperatorController < ApplicationController
       )
     end
   end
-
-  def current_operator
-    if session[:operator_id]
-      @current_operator ||= Operator.find(session[:operator_id])
-    end
-  end #
-
-  helper_method :current_operator
 end
